@@ -27,3 +27,19 @@ curl 'http://api.census.gov/data/2014/acs/acs5?get=B01003_001E&for=tract:*&in=st
 curl 'http://api.census.gov/data/2014/acs/acs5/profile?get=B01003_001E&for=state:06' -o asdf.json
 
 http://api.census.gov/data/2014/acs/acs5?
+
+
+
+from Matt Z:
+
+- copy files from shared folder to local folder for development
+
+cp {MAPC_floodrisk.cpg, MAPC_floodrisk.dbf, MAPC_floodrisk.prj, MAPC_floodrisk.sbn, MAPC_floodrisk.sbx, MAPC_floodrsik.shp} .
+
+- install shapefile javascript package commnad line tool
+
+yarn global add shapefile
+
+- convert to GeoJSON with properties
+
+shp2json MAPC_floodrisk.shp > MAPC_floodrisk.json
